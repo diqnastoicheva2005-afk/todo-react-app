@@ -1,0 +1,144 @@
+:root {
+  --primary-color: #609fe7;
+  --secondary-color: #e6ccff;
+  --uncompleted-bg: #fff4e6;
+  --completed-bg: #e3faf3;
+}
+.main-title {
+  font-family: 'Georgia', serif; 
+  font-style: italic; 
+  font-size: 2.5rem;
+  color: #2d3436;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/*Load More бутона*/
+.load-more {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background: #4a90e2;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-style: normal;
+}
+
+.load-more:hover {
+  background: #357abd;
+}
+
+.user-tag {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  display: block;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.todo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.todo-column {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 600px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 0;
+  color: #333;
+  border-bottom: 3px solid #eee;
+  padding-bottom: 10px;
+}
+
+.todo-card {
+  background: var(--uncompleted-bg);
+  border: 1px solid #ffe8cc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-card.completed {
+  background: var(--completed-bg);
+  border: 1px solid #c3fae8;
+}
+
+.todo-card p {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.complete-btn {
+  background: #ff922b;
+  color: white;
+}
+
+.uncomplete-btn {
+  background: #20c997;
+  color: white;
+}
+
+.date-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.filter-group, .sort-group {
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
